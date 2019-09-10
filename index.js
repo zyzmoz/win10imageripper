@@ -41,6 +41,7 @@ const fetchImages = () => {
   const outputPath = path.join(__dirname, 'temp');
   return new Promise((resolve) => fs.readdir(outputPath, (err, files) => {
     let res = [] 
+    console.log('files', files);
     files.forEach(file => res.push(`${targetPath}/${file}`));
     resolve(res);
   }));
