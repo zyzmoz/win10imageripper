@@ -6,9 +6,9 @@ const userName = process.env['USERPROFILE'].split(path.sep)[2];
 const directoryPath = path.join('/Users', `${userName}/AppData/Local/Packages/Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy/LocalState/Assets`);
 
 
-const fetchImages = (output = __dirname) => {
+const fetchImages = async(output = __dirname) => {
   const targetPath = path.join(output, 'temp');
-  fs.readdir(directoryPath, (err, files) => {
+  await fs.readdir(directoryPath, (err, files) => {
     if (err)
       return console.log(err);
 
