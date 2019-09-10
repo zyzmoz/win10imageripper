@@ -1,0 +1,23 @@
+{
+  "name": "win10imageripper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "image",
+    "windows"
+  ],
+  "engines": {
+    "node": ">=6.9.0"
+  },
+  "author": "Daniel Cunha",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "0.0.1-security",    
+    "image-size": "^0.7.4",    
+    "path": "^0.12.7"
+  }
+}
