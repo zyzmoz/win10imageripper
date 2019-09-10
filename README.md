@@ -8,7 +8,7 @@ Node module created to get Windows 10 login screen images.
 - image-size
 - jest
 
-## Getting Sterted
+## Getting Started
 
 Clone the sources using npm:
 ```
