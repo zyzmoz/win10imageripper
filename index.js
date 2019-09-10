@@ -14,11 +14,11 @@ const fetchImages = async() => {
     files.forEach(file => {
       if (!fs.existsSync('temp'))
         fs.mkdirSync('temp');
-      const target = `temp/${file}.temp.jpg`;
-      fs.copyFile(`${directoryPath}/${file}`, target, (err, file) => {
+      const targetPath = path.join(__dirname,`temp`);
+      fs.copyFile(`${directoryPath}/${file}`, `${targetPath}/${file}.temp.jpg`, (err, file) => {
         if (err)
           return console.log(err);
-        const targetFile = path.join(__dirname, target);
+        const targetFile = `${targetPath}/${file}.temp.jpg`;
         sizeOf(targetFile, (err, size) => {
           if (err) {
             fs.unlink(target, (err) => {
