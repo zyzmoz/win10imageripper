@@ -19,7 +19,7 @@ To use the module you'll need to invoke the function as:
 ```
   const ripper = require('win10imageripper');
 
-  ripper.fetchImages(__dirname).then(res => console.log(res));
+  ripper.fetchImages(<output folder>).then(res => console.log(res));
 ```
 
 ## Commands
