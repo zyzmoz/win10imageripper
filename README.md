@@ -1,4 +1,4 @@
-# Win10 Image Ripper
+# Win10 Image Ripper Lib
 
 Node module created to get Windows 10 login screen images.
 
