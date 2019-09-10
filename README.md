@@ -15,7 +15,7 @@ Clone the sources using npm:
   npm i -S https://github.com/zyzmoz/win10imageripper.git
 ```
 
-To use the module you'll need to evoke the function as:
+To use the module you'll need to invoke the function as:
 ```
   const ripper = require('win10imageripper');
 
