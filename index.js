@@ -6,9 +6,9 @@ const userName = process.env['USERPROFILE'].split(path.sep)[2];
 const directoryPath = path.join('/Users', `${userName}/AppData/Local/Packages/Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy/LocalState/Assets`);
 
 
-const fetchImages = async() => {
+const fetchImages = () => {
   const targetPath = path.join(__dirname, 'temp');
-  await fs.readdir(directoryPath, (err, files) => {
+  fs.readdir(directoryPath, (err, files) => {
     if (err)
       return console.log(err);
 
@@ -39,10 +39,13 @@ const fetchImages = async() => {
     });
   });
   const outputPath = path.join(__dirname, 'temp');
-  const output = await new Promise((resolve) => fs.readdir(outputPath, (err, files) => {
-    resolve(files.map(file => `${targetPath}/${file}`));
+  return new Promise((resolve) => fs.readdir(outputPath, (err, files) => {
+    let res = [] 
+    files.forEach(file => res.push(`${targetPath}/${file}`));
+    resolve(res);
   }));
-  return output;
+  
+  
 }
 
 module.exports = {
