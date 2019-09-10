@@ -39,6 +39,7 @@ const fetchImages = (output = __dirname) => {
     });
   });
   const outputPath = path.join(output, 'temp');
+  console.log(outputPath);
   return new Promise((resolve) => fs.readdir(outputPath, (err, files) => {
     let res = [] 
     console.log('files', files);
