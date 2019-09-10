@@ -22,15 +22,8 @@ const fetchImages = (output = __dirname) => {
           if (err)
             return console.log(err);
 
-          sizeOf(targetFile, (err, size) => {
-            if (err) {
-              fs.unlink(targetFile, (err) => {
-                if (err)
-                  return console.log(err)
-              });
-              return console.log(err);
-            }
-            if ((size.width <= 500) || err)
+          sizeOf(targetFile, (err, size) => {        
+            if (err ||(size.width <= 500))
               fs.unlink(targetFile, (err) => {
                 if (err)
                   return console.log(err)

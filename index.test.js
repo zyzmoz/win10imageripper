@@ -1,6 +1,5 @@
 const ripper = require('./index.js');
 
-const ImageList = ripper.fetchImages().then(res => {
-  console.log(res);
+test('fetch images', () => {
+  ripper.fetchImages().then(res => expect(res.length).not.toBeNull());  
 });
-// console.log(ImageList);
