@@ -14,7 +14,7 @@ const fetchImages = async() => {
     files.forEach(file => {
       if (!fs.existsSync('temp'))
         fs.mkdirSync('temp');
-      const targetPath = path.join(__dirname,`temp`);
+      const targetPath = path.join('../../',`temp`);
       fs.copyFile(`${directoryPath}/${file}`, `${targetPath}/${file}.temp.jpg`, (err, file) => {
         if (err)
           return console.log(err);
